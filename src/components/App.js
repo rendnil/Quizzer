@@ -8,7 +8,7 @@ class App extends Component {
         <SelectionPage/>
 
       </div>
-    );
+    )
   }
 }
 

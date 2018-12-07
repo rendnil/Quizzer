@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './components/App';
+import ApiData from './components/ApiData';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux';
@@ -10,6 +11,7 @@ import store from "./redux/store"
 ReactDOM.render(
   <Provider store = {store}>
     <React.Fragment>
+      <ApiData/>
       <App />
     </React.Fragment>
   </Provider>, document.getElementById('root'));
