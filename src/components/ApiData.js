@@ -1,15 +1,25 @@
 import React from "react"
+import { connect } from 'react-redux'
+
 
 
 class ApiData extends React.Component{
+
+  componentDidMount(){
+
+  }
+
+
   render(){
     return(
-      <React.Fragment>
-        heooo
-      </React.Fragment>
+      <React.Fragment/>
     )
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
 
-export default ApiData
+}
+
+
+export default connect(null, mapDispatchToProps)(ApiData)

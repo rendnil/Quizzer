@@ -2,11 +2,12 @@
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
 
 
-class QuestionsAdapter{
+export default class QuestionsAdapter{
 
-  static
-
-
-
-
+  static fetchCategories(){
+    return (
+      fetch(`${API_BASE_URL}/categories`)
+      .then(r=>r.json())
+    )
+  }
 }
