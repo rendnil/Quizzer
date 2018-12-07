@@ -11,10 +11,15 @@ class ApiData extends React.Component{
 
 
   render(){
+    console.log("STATE",this.props.state);
     return(
       <React.Fragment/>
     )
   }
+}
+
+const mapStateToProps = (state) => {
+  return {state: state}
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -22,4 +27,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(null, mapDispatchToProps)(ApiData)
+export default connect(mapStateToProps, mapDispatchToProps)(ApiData)
