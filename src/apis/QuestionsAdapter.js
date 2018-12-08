@@ -10,4 +10,12 @@ export default class QuestionsAdapter{
       .then(r=>r.json())
     )
   }
+
+  static fetchCategoryQuestions(id){
+    return (
+      fetch(`${API_BASE_URL}/categories/${id}`)
+      .then(r=>r.json())
+    )
+  }
+  
 }
