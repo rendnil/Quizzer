@@ -1,8 +1,8 @@
 import QuestionsAdapter from "../../apis/QuestionsAdapter"
 
-export const fetchQuestions = () => {
+export const fetchQuestions = (id) => {
   return (dispatch) => {
-    QuestionsAdapter.fetchCategoryQuestions()
+    QuestionsAdapter.fetchCategoryQuestions(id)
     .then((data) => {
       dispatch({type:"FETCH_QUESTIONS", payload: data})
     })

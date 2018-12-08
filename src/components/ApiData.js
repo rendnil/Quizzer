@@ -1,12 +1,14 @@
 import React from "react"
 import { connect } from 'react-redux'
 import {fetchCategories} from "../redux/actions/fetchCategoriesAction"
+import {fetchQuestions} from "../redux/actions/fetchQuestionsAction"
 
 
 class ApiData extends React.Component{
 
   componentDidMount(){
     this.props.fetchCategories()
+    this.props.fetchQuestions(1)
   }
 
 
@@ -23,7 +25,11 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {fetchCategories: ()=>dispatch(fetchCategories())}
+  return {
+    fetchCategories: ()=>dispatch(fetchCategories()),
+    fetchQuestions: (id)=>dispatch(fetchQuestions(id))
+
+  }
 }
 
 
