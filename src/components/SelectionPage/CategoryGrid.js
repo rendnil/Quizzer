@@ -12,7 +12,7 @@ const CategoryGrid =  ({categories}) => {
         <Grid.Row>
         {categories.map((category)=>{
           return(
-            <Grid.Column >
+            <Grid.Column key={category.id}>
               <CategoryBox category={category}/>
            </Grid.Column>
 
