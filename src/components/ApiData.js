@@ -8,7 +8,6 @@ class ApiData extends React.Component{
 
   componentDidMount(){
     this.props.fetchCategories()
-    this.props.fetchQuestions(1)
   }
 
 
@@ -26,9 +25,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchCategories: ()=>dispatch(fetchCategories()),
-    fetchQuestions: (id)=>dispatch(fetchQuestions(id))
-
+    fetchCategories: ()=>dispatch(fetchCategories())
   }
 }
 

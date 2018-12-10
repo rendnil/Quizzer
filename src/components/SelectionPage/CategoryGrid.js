@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from 'react-redux'
 
 import {Grid, Container} from 'semantic-ui-react'
+import CategoryBox from "./CategoryBox"
 
 
 const CategoryGrid =  ({categories}) => {
@@ -11,12 +12,10 @@ const CategoryGrid =  ({categories}) => {
         <Grid.Row>
         {categories.map((category)=>{
           return(
-
-            <Grid.Column>
-
-           <h1>{category.name}</h1>
+            <Grid.Column >
+              <CategoryBox category={category}/>
            </Grid.Column>
-           
+
          )
         })}
         </Grid.Row>
