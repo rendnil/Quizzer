@@ -1,10 +1,12 @@
 import React from "react"
+import { connect } from 'react-redux'
+import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 import {Segment} from 'semantic-ui-react'
 
 class CategoryBox extends React.Component{
 
   handleClick = () => {
-    console.log(this.props.category.name)
+    this.props.fetchQuestions(this.props.category.id)
   }
 
 
@@ -19,4 +21,10 @@ class CategoryBox extends React.Component{
   }
 }
 
-export default CategoryBox
+const mapDispatchToProps = (dispatch) => {
+  return{
+    fetchQuestions: (id) => dispatch(fetchQuestions(id))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CategoryBox)
