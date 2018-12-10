@@ -12,6 +12,7 @@
 
 const numQuestions = 10
 
+//helper method for return random index in an array
 const getRandomIndex = (arr) => {
   return Math.floor(Math.random()*arr.length)
 }
@@ -24,16 +25,17 @@ export default class Quiz{
     this.questions = []
   }
 
+  //method for selecting all questions in a quiz
   selectQuestions(){
     let counter = 1
     while (counter<= numQuestions){
-      //debugger
 
       this.questions.push(this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)]))
       counter++
     }
   }
 
+  //method for creating the answer set for a given question
   constructAnswers(question){
     const answers = [ ]
 
@@ -52,6 +54,7 @@ export default class Quiz{
     return answers.sort()
   }
 
+  //method for creating each question obj in a quiz
   constructQuestionObj(question){
     return{
       id: question.id,
@@ -70,7 +73,4 @@ export default class Quiz{
     return {categoryName:this.name, questions: this.questions}
   }
 
-
-
-
-}
+} //end Quiz class
