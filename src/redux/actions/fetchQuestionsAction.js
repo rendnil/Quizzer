@@ -3,6 +3,7 @@ import Quiz from "../../parsers/quiz"
 
 export const fetchQuestions = (id) => {
   return (dispatch) => {
+    dispatch({type:"ABOUT TO CREATE"})
     QuestionsAdapter.fetchCategoryQuestions(id)
     .then((data) => {
       //dispatch({type:"SELECT_CATEGORY", payload: data})

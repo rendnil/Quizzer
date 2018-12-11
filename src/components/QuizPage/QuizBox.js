@@ -5,30 +5,32 @@ import QuestionDetail from "./QuestionDetail"
 
 class QuizBox extends React.Component{
 
-  state = {
-    questionNumber: 1
-  }
-
   render(){
-    console.log(this.props);
-    return(
-      <React.Fragment>
-        <Segment>
-          {/*<h1>{this.props.currentQuiz.categoryName} Quiz</h1> */}
-        </Segment>
-        <Segment>
-          <h1>Question Number: {this.state.questionNumber}</h1>
-        </Segment>
+    console.log("quiz box render",this.props);
+    if (this.props.currentQuiz){
+      return(
+        <React.Fragment>
+          <Segment>
+            <h1>{this.props.currentQuiz.categoryName} Quiz</h1>
+          </Segment>
+          <Segment>
+            <h1>Question Number: {this.props.currentQuiz.questionNumber}</h1>
+          </Segment>
 
-        {this.props.currentQuiz? <QuestionDetail question={this.props.currentQuiz.questions[this.state.questionNumber-1]}/>:null}
+          <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
 
 
-      </React.Fragment>
-    )
+        </React.Fragment>
+      )
+    }else{
+      return null
+    }
+
   }
 }
 
 const mapStateToProps = (state) => {
+
   return{
     currentQuiz: state.currentQuiz
   }
