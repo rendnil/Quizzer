@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import SelectionPage from "./SelectionPage/SelectionPage"
-import SelectionPage from "./SelectionPage/SelectionPage"
+import QuizPage from "./QuizPage/QuizPage"
 
 class App extends Component {
   render() {
