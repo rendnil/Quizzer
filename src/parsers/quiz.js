@@ -28,9 +28,18 @@ export default class Quiz{
   //method for selecting all questions in a quiz
   selectQuestions(){
     let counter = 1
+    //use array of question ids to make sure we don't have repeates
+    const idArr = [ ]
     while (counter<= numQuestions){
+      let newQuestion = this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)])
 
-      this.questions.push(this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)]))
+      //if we've already added this question, keep finding new ones 
+      while(idArr.includes(newQuestion.id)){
+        newQuestion = this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)])
+      }
+
+      this.questions.push(newQuestion)
+      idArr.push(newQuestion.id)
       counter++
     }
   }

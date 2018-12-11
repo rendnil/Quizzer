@@ -13,6 +13,7 @@ class ApiData extends React.Component{
 
   render(){
     console.log("STATE",this.props.state);
+    console.log("current quiz", this.props.currentQuiz)
     return(
       <React.Fragment/>
     )
@@ -20,7 +21,7 @@ class ApiData extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  return {state: state}
+  return {state: state, currentQuiz:state.currentQuiz.questions}
 }
 
 const mapDispatchToProps = (dispatch) => {
