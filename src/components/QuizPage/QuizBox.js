@@ -8,6 +8,7 @@ class QuizBox extends React.Component{
   render(){
     console.log("quiz box render",this.props);
     if (this.props.currentQuiz){
+      console.log("question number", this.props.currentQuiz.questionNumber);
       return(
         <React.Fragment>
           <Segment>
