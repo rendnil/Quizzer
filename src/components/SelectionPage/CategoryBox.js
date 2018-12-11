@@ -1,4 +1,5 @@
 import React from "react"
+import {NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 import {Segment} from 'semantic-ui-react'
@@ -14,7 +15,9 @@ class CategoryBox extends React.Component{
   render(){
     return(
       <Segment textAlign="center" onClick={this.handleClick}>
-        <h1>{this.props.category.name}</h1>
+        <NavLink to = "/quiz">
+          <h1>{this.props.category.name}</h1>
+        </NavLink>
       </Segment>
 
     )
