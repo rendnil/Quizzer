@@ -1,20 +1,36 @@
 import React from "react"
+import { connect } from 'react-redux'
 import {Segment} from 'semantic-ui-react'
+import QuestionDetail from "./QuestionDetail"
 
 class QuizBox extends React.Component{
 
+  state = {
+    questionNumber: 1
+  }
+
   render(){
+    console.log(this.props);
     return(
       <React.Fragment>
         <Segment>
-          heyo
+          <h1>{this.props.currentQuiz.categoryName} Quiz</h1>
         </Segment>
+        <Segment>
+          <h1>Question Number: {this.state.questionNumber}</h1>
+        </Segment>
+        <QuestionDetail />
+
+
       </React.Fragment>
     )
   }
-
-
-
 }
 
-export default QuizBox
+const mapStateToProps = (state) => {
+  return{
+    currentQuiz: state.currentQuiz
+  }
+}
+
+export default connect(mapStateToProps)(QuizBox)

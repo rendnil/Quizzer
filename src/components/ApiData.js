@@ -12,8 +12,8 @@ class ApiData extends React.Component{
 
 
   render(){
-    console.log("STATE",this.props.state);
-    console.log("current quiz", this.props.currentQuiz)
+    // console.log("STATE",this.props.state);
+    // console.log("current quiz", this.props.currentQuiz)
     return(
       <React.Fragment/>
     )
