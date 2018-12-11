@@ -21,7 +21,7 @@ class ApiData extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-  return {state: state, currentQuiz:state.currentQuiz.questions}
+  return {state: state}
 }
 
 const mapDispatchToProps = (dispatch) => {

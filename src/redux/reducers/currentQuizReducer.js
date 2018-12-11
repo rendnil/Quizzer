@@ -1,5 +1,5 @@
 
-const defaultState = {}
+const defaultState = null
 
 const currentQuizReducer = (state=defaultState, action) => {
   switch(action.type){

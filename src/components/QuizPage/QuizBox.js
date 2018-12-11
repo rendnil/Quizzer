@@ -14,12 +14,13 @@ class QuizBox extends React.Component{
     return(
       <React.Fragment>
         <Segment>
-          <h1>{this.props.currentQuiz.categoryName} Quiz</h1>
+          {/*<h1>{this.props.currentQuiz.categoryName} Quiz</h1> */}
         </Segment>
         <Segment>
           <h1>Question Number: {this.state.questionNumber}</h1>
         </Segment>
-        <QuestionDetail />
+
+        {this.props.currentQuiz? <QuestionDetail question={this.props.currentQuiz.questions[this.state.questionNumber-1]}/>:null}
 
 
       </React.Fragment>
