@@ -33,7 +33,7 @@ export default class Quiz{
     while (counter<= numQuestions){
       let newQuestion = this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)])
 
-      //if we've already added this question, keep finding new ones 
+      //if we've already added this question, keep finding new ones
       while(idArr.includes(newQuestion.id)){
         newQuestion = this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)])
       }
@@ -70,8 +70,6 @@ export default class Quiz{
       prompt: question.question,
       correctAnswer: question.answer,
       answers: this.constructAnswers(question),
-      correctQs: [ ],
-      incorrectQs: [ ],
       value: question.value
     }
   }
@@ -79,7 +77,11 @@ export default class Quiz{
 
   constructQuiz(){
     this.selectQuestions()
-    return {categoryName:this.name, questions: this.questions}
+    return {categoryName:this.name,
+            questions: this.questions,
+            correctQs: [],
+            incorrectQs: []
+    }
   }
 
 } //end Quiz class

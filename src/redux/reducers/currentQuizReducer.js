@@ -13,6 +13,8 @@ const currentQuizReducer = (state=defaultState, action) => {
           return {...state, selectedAnswer:null}
         }
         return {...state, selectedAnswer: action.payload}
+    case "SUBMIT_ANSWER":
+      return action.payload
     default:
       return state
   }
