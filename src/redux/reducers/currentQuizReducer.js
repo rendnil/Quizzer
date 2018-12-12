@@ -8,7 +8,8 @@ const currentQuizReducer = (state=defaultState, action) => {
       return {...action.payload, questionNumber:defaultQuestionNumber}
     case "INCREMENT_QUESTION_NUMBER":
         return {...state, questionNumber:state.questionNumber+1}
-
+    case "SELECT_ANSWER":
+        return {...state, selectedAnswer: action.payload}
     default:
       return state
   }

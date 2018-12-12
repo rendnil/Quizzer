@@ -1,15 +1,24 @@
 import React from "react"
 import { connect } from 'react-redux'
 import {Segment} from 'semantic-ui-react'
+import {NavLink } from 'react-router-dom';
 import QuestionDetail from "./QuestionDetail"
 
 class QuizBox extends React.Component{
 
+  renderBack(){
+    return(
+      <NavLink to = "/">
+        <h1>BACK TO CATEGORIES</h1>
+      </NavLink>
+    )
+  }
+
+
   render(){
     console.log("quiz box render",this.props);
-    if (this.props.currentQuiz){
-      console.log("question number", this.props.currentQuiz.questionNumber);
-      return(
+    return(!this.props.currentQuiz? this.renderBack() :
+          (
         <React.Fragment>
           <Segment>
             <h1>{this.props.currentQuiz.categoryName} Quiz</h1>
@@ -23,15 +32,12 @@ class QuizBox extends React.Component{
 
         </React.Fragment>
       )
-    }else{
-      return null
-    }
-
+    )
   }
 }
 
 const mapStateToProps = (state) => {
-
+  console.log("called map state");
   return{
     currentQuiz: state.currentQuiz
   }

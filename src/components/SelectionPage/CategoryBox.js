@@ -7,6 +7,7 @@ import {Segment} from 'semantic-ui-react'
 class CategoryBox extends React.Component{
 
   handleClick = () => {
+    console.log("calling fetch questions");
     this.props.fetchQuestions(this.props.category.id)
   }
 
