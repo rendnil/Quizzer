@@ -1,8 +1,9 @@
 import React from "react"
 import { connect } from 'react-redux'
-import {Segment} from 'semantic-ui-react'
+import {Segment, Button} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import QuestionDetail from "./QuestionDetail"
+import {submitAnswer} from "../../redux/actions/submitAnswer"
 
 class QuizBox extends React.Component{
 
@@ -12,6 +13,10 @@ class QuizBox extends React.Component{
         <h1>BACK TO CATEGORIES</h1>
       </NavLink>
     )
+  }
+
+  submitAnswer = () => {
+    this.props.submitAnswer(this.props.currentQuiz)
   }
 
 
@@ -25,11 +30,11 @@ class QuizBox extends React.Component{
           </Segment>
           <Segment>
             <h1>Question Number: {this.props.currentQuiz.questionNumber}</h1>
+
+            <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
+
+            <Button onClick={this.submitAnswer} basic primary>Submit</Button>
           </Segment>
-
-          <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
-
-
         </React.Fragment>
       )
     )
@@ -43,4 +48,11 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(QuizBox)
+
+const mapDispatchToProps = dispatch => {
+  return{
+    submitAnswer: (quiz)=>dispatch(submitAnswer(quiz))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuizBox)
