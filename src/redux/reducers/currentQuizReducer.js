@@ -9,6 +9,9 @@ const currentQuizReducer = (state=defaultState, action) => {
     case "INCREMENT_QUESTION_NUMBER":
         return {...state, questionNumber:state.questionNumber+1}
     case "SELECT_ANSWER":
+        if (state.selectedAnswer===action.payload){
+          return {...state, selectedAnswer:null}
+        }
         return {...state, selectedAnswer: action.payload}
     default:
       return state

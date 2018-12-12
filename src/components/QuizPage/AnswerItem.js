@@ -9,19 +9,15 @@ import {Segment} from 'semantic-ui-react'
 
 class AnswerItem extends React.Component{
 
-  state={
-    isSelected:false
-  }
-
   handleClick = () => {
     console.log(this)
     this.props.selectAnswer(this.props.answer)
-    this.setState({isSelected:!this.state.isSelected})
+
     //this.props.incrementQuestionNumber()
   }
 
   checkSelected(){
-    if (this.state.isSelected){
+    if (this.props.answer===this.props.selectedAnswer){
       return(
         <Segment inverted color="blue" onClick={this.handleClick}>
           <h3>{this.props.answer}</h3>
@@ -51,6 +47,10 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+const mapStateToProps = (state) => {
+  return{selectedAnswer: state.currentQuiz.selectedAnswer}
+}
 
 
-export default connect(null, mapDispatchToProps)(AnswerItem)
+
+export default connect(mapStateToProps, mapDispatchToProps)(AnswerItem)
