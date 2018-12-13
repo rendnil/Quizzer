@@ -5,7 +5,8 @@ import {Grid, Container} from 'semantic-ui-react'
 import CategoryBox from "./CategoryBox"
 
 
-const CategoryGrid =  ({categories}) => {
+const CategoryGrid =  ({categories, state}) => {
+  console.log("WHOLE STATE",state);
   return(
     <React.Fragment>
       <Grid columns={4}>
@@ -26,7 +27,8 @@ const CategoryGrid =  ({categories}) => {
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categories,
+    state:state
   }
 }
 
