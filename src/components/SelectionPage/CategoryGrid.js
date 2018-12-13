@@ -15,7 +15,7 @@ const CategoryGrid =  ({categories, state}) => {
           return(
             <Grid.Column key={category.id}>
               <CategoryBox category={category}/>
-           </Grid.Column>
+            </Grid.Column>
 
          )
         })}

@@ -10,11 +10,11 @@ import CategoryGrid from "./CategoryGrid"
     const renderStartQuiz = ()=>{
         if(selectedCategory){
           return(
-            <Button primary basic>
               <NavLink to = "/quiz">
+              <Button primary basic>
                 Start {selectedCategory.name} Quiz
+                </Button>
               </NavLink>
-            </Button>
           )
         }
       }
