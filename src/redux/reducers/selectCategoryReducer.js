@@ -1,5 +1,5 @@
 
-const defaultState = {}
+const defaultState = null
 
 const selectCategoryReducer = (state=defaultState, action) => {
   switch(action.type){

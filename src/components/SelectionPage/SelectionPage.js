@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from 'react-redux'
+import {Button} from 'semantic-ui-react'
 
 import WelcomeBanner from "./WelcomeBanner"
 import CategoryGrid from "./CategoryGrid"
@@ -7,7 +8,9 @@ import CategoryGrid from "./CategoryGrid"
   const SelectionPage = ({selectedCategory}) => {
     const renderStartQuiz = ()=>{
         if(selectedCategory){
-          console.log("wassup");
+          return(
+            <Button>Start {selectedCategory.name} Quiz</Button>
+          )
         }
       }
 
