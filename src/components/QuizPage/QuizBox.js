@@ -16,13 +16,9 @@ class QuizBox extends React.Component{
     )
   }
 
-}
-  }
-
   submitAnswer = () => {
     this.props.submitAnswer(this.props.currentQuiz)
   }
-
 
   render(){
     console.log("quiz box render",this.props);
@@ -42,7 +38,7 @@ class QuizBox extends React.Component{
         </React.Fragment>
       )
     }else{
-      return(<Redirect to ="/" />)
+      return(<Redirect to ="/results" />)
     }
   }
 }
