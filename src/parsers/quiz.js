@@ -10,7 +10,7 @@
 //get randomized questions
 //get randomized answers
 
-const numQuestions = 10
+const numQuestions = 5
 
 //helper method for return random index in an array
 const getRandomIndex = (arr) => {
@@ -80,7 +80,8 @@ export default class Quiz{
     return {categoryName:this.name,
             questions: this.questions,
             correctQs: [],
-            incorrectQs: []
+            incorrectQs: [],
+            completed: false
     }
   }
 

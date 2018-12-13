@@ -9,11 +9,26 @@ export const submitAnswer = (quiz) => {
       updatedIncorrectQs.push(currentQuestion)
     }
 
-    return {type:"SUBMIT_ANSWER",
-            payload: {...quiz,
-              correctQs:updatedCorrectQs,
-              incorrectQs:updatedIncorrectQs,
-              questionNumber:quiz.questionNumber+1
-            }
+    ///check if quiz is completed
+    if (quiz.questionNumber === quiz.questions.length){
+      return {
+        type:"SUBMIT_ANSWER",
+        payload: {...quiz,
+                  correctQs:updatedCorrectQs,
+                  incorrectQs:updatedIncorrectQs,
+                  questionNumber:quiz.questionNumber+1,
+                  completed:true
+                  }
+      }
+    }else{
+
+      return {
+        type:"SUBMIT_ANSWER",
+        payload: {...quiz,
+                  correctQs:updatedCorrectQs,
+                  incorrectQs:updatedIncorrectQs,
+                  questionNumber:quiz.questionNumber+1
+                  }
+      }
     }
 }
