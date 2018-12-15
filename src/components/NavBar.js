@@ -7,11 +7,11 @@ const NavBar = (props) => {
 
   //generate different navbar options and links
   return(
-    <Menu>
+    <Menu inverted color="blue">
 
       {/* display the site name w/icon */}
       <Menu.Item header>
-        <Icon name="question" size="large" color="green" style={{ marginRight: '1.5em' }} />
+        <Icon name="question" size="large" style={{ marginRight: '1.5em' }} />
         <NavLink to = "/">
         Quizzer
         </NavLink>
