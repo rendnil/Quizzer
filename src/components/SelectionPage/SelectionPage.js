@@ -5,14 +5,22 @@ import {NavLink } from 'react-router-dom';
 
 import WelcomeBanner from "./WelcomeBanner"
 import CategoryGrid from "./CategoryGrid"
+import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 
-  const SelectionPage = ({selectedCategory}) => {
+  const SelectionPage = (props) => {
+
+    const handleClick = () => {
+      // console.log("hey");
+      // props.fetchQuestions(props.selectedCategory.id)
+    }
+
+
     const renderStartQuiz = ()=>{
-        if(selectedCategory){
+        if(props.selectedCategory){
           return(
               <NavLink to = "/quiz">
-              <Button primary basic>
-                Start {selectedCategory.name} Quiz
+              <Button onClick={handleClick} primary basic>
+                Start {props.selectedCategory.name} Quiz
                 </Button>
               </NavLink>
           )
@@ -36,4 +44,10 @@ import CategoryGrid from "./CategoryGrid"
     }
   }
 
-export default connect(mapStateToProps)(SelectionPage)
+  const mapDispatchToProps = (dispatch) => {
+    return{
+      fetchQuestions: (id) => dispatch(fetchQuestions(id))
+    }
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectionPage)

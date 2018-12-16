@@ -9,26 +9,29 @@ export const submitAnswer = (quiz) => {
       updatedIncorrectQs.push(currentQuestion)
     }
 
+    return (dispatch) => {
     ///check if quiz is completed
-    if (quiz.questionNumber === quiz.questions.length){
-      return {
-        type:"SUBMIT_ANSWER",
-        payload: {...quiz,
-                  correctQs:updatedCorrectQs,
-                  incorrectQs:updatedIncorrectQs,
-                  questionNumber:quiz.questionNumber+1,
-                  completed:true
-                  }
-      }
-    }else{
+      if (quiz.questionNumber === quiz.questions.length){
+        dispatch({
+          type:"SUBMIT_ANSWER",
+          payload: {...quiz,
+                    correctQs:updatedCorrectQs,
+                    incorrectQs:updatedIncorrectQs,
+                    questionNumber:quiz.questionNumber+1,
+                    completed:true
+                    }
+        })
+        dispatch({type:"RESET_CATEGORY"})
+      }else{
 
-      return {
-        type:"SUBMIT_ANSWER",
-        payload: {...quiz,
-                  correctQs:updatedCorrectQs,
-                  incorrectQs:updatedIncorrectQs,
-                  questionNumber:quiz.questionNumber+1
-                  }
+        dispatch({
+          type:"SUBMIT_ANSWER",
+          payload: {...quiz,
+                    correctQs:updatedCorrectQs,
+                    incorrectQs:updatedIncorrectQs,
+                    questionNumber:quiz.questionNumber+1
+                    }
+        })
       }
     }
 }
