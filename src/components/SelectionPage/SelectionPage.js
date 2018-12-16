@@ -18,22 +18,24 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
     const renderStartQuiz = ()=>{
         if(props.selectedCategory){
           return(
+            <div style={{textAlign:"center", width:"25%", margin:"auto"}}>
               <NavLink to = "/quiz">
-              <Button onClick={handleClick} primary basic>
-                Start {props.selectedCategory.name} Quiz
+                <Button onClick={handleClick} primary basic>
+                  Start {props.selectedCategory.name} Quiz
                 </Button>
               </NavLink>
+              </div>
           )
         }
       }
 
 
     return(
-      <React.Fragment>
+      <div style={{maxWidth:"90%", margin:"auto"}}>
         <WelcomeBanner/>
         <CategoryGrid />
         {renderStartQuiz()}
-      </React.Fragment>
+      </div>
     )
   }
 

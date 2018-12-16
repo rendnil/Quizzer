@@ -8,7 +8,7 @@ import CategoryBox from "./CategoryBox"
 const CategoryGrid =  ({categories, state}) => {
   console.log("WHOLE STATE",state);
   return(
-    <React.Fragment>
+    <div style={{marginBottom:"2%"}}>
       <Grid columns={4}>
         <Grid.Row>
         {categories.map((category)=>{
@@ -21,7 +21,7 @@ const CategoryGrid =  ({categories, state}) => {
         })}
         </Grid.Row>
       </Grid>
-    </React.Fragment>
+    </div>
   )
 }
 

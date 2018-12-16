@@ -1,9 +1,16 @@
 import React from "react"
+import {Header} from 'semantic-ui-react'
 
   const WelcomeBanner = () => {
-    return(<h1>Welcome To Quizzer!</h1>)
-  }
+    return(
+      <div style={{marginBottom: "2%"}}>
+        <Header as="h1" textAlign='center'>
+          Welcome To Quizzer!
+        </Header>
+      </div>
 
+    )
+  }
 
 
 
