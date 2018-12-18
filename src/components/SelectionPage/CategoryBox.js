@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 import {selectCategory} from "../../redux/actions/selectCategory"
 import {Segment, Container} from 'semantic-ui-react'
+import "../../css/SelectionPage.css"
 
 class CategoryBox extends React.Component{
 
@@ -16,13 +17,13 @@ class CategoryBox extends React.Component{
   checkSelected(){
     if (this.props.selectedCategory && this.props.category.id===this.props.selectedCategory.id){
       return(
-        <Segment textAlign = "center" inverted color="purple" onClick={this.handleClick}>
+        <Segment className="category-box" textAlign = "center" inverted color="purple" onClick={this.handleClick}>
           <h3>{this.props.category.name}</h3>
         </Segment>
       )
     }else{
       return(
-        <Segment textAlign = "center" onClick={this.handleClick}>
+        <Segment className="category-box" textAlign = "center" onClick={this.handleClick}>
           <h3>{this.props.category.name}</h3>
         </Segment>
       )
