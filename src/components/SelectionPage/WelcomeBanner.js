@@ -9,7 +9,6 @@ import "../../css/SelectionPage.css"
           Welcome To Quizzer!
         </Header>
       </div>
-
     )
   }
 

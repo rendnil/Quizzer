@@ -30,14 +30,11 @@ class CategoryBox extends React.Component{
     }
   }
 
-
-
-
   render(){
     return(
-      <Container>
-      {this.checkSelected()}
-      </Container>
+      <React.Fragment>
+        {this.checkSelected()}
+      </React.Fragment>
     )
   }
 }

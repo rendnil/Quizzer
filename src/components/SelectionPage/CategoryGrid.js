@@ -8,18 +8,15 @@ import CategoryBox from "./CategoryBox"
 const CategoryGrid =  ({categories, state}) => {
   console.log("WHOLE STATE",state);
   return(
-    <div style={{marginBottom:"2%"}}>
+    <div className="category-grid-wrapper">
       <Grid columns={4}>
-
         {categories.map((category)=>{
           return(
             <Grid.Column key={category.id}>
               <CategoryBox category={category}/>
             </Grid.Column>
-
          )
         })}
-        
       </Grid>
     </div>
   )

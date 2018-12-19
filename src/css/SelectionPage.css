@@ -1,10 +1,15 @@
-#banner{
-  margin-top: 4%;
-  margin-bottom: 6%;
+.selection-page-wrapper{
+  max-width: 90%;
+  margin: auto;
 }
 
-.category-box{
+.category-grid-wrapper{
   margin-bottom: 2%;
+}
+
+#banner{
+  margin-top: 2%;
+  margin-bottom: 4%;
 }
 
 #start-button{
