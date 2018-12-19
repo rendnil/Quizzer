@@ -5,6 +5,7 @@ import {NavLink } from 'react-router-dom';
 
 import WelcomeBanner from "./WelcomeBanner"
 import CategoryGrid from "./CategoryGrid"
+import InfoMessage from "./InfoMessage"
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 
   const SelectionPage = (props) => {
@@ -25,8 +26,9 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 
     return(
       <div className="selection-page-wrapper">
-        <WelcomeBanner/>
+        <WelcomeBanner />
         <CategoryGrid />
+        {!props.selectedCategory? <InfoMessage message="Select A Category To Begin" />: null}
         {renderStartQuiz()}
       </div>
     )

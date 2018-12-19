@@ -18,3 +18,11 @@
   margin-right: auto;
   text-align: center;
 }
+
+#start-message{
+  margin-top: 4%;
+  text-align: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}

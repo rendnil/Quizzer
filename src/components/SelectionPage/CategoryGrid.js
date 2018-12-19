@@ -1,6 +1,5 @@
 import React from "react"
 import { connect } from 'react-redux'
-
 import {Grid, Container} from 'semantic-ui-react'
 import CategoryBox from "./CategoryBox"
 
