@@ -10,7 +10,7 @@ const CategoryGrid =  ({categories, state}) => {
   return(
     <div style={{marginBottom:"2%"}}>
       <Grid columns={4}>
-        <Grid.Row>
+
         {categories.map((category)=>{
           return(
             <Grid.Column key={category.id}>
@@ -19,7 +19,7 @@ const CategoryGrid =  ({categories, state}) => {
 
          )
         })}
-        </Grid.Row>
+        
       </Grid>
     </div>
   )

@@ -18,9 +18,9 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
     const renderStartQuiz = ()=>{
         if(props.selectedCategory){
           return(
-            <div style={{textAlign:"center", width:"25%", margin:"auto"}}>
+            <div id="start-button">
               <NavLink to = "/quiz">
-                <Button onClick={handleClick} primary basic>
+                <Button onClick={handleClick} size="massive" primary basic>
                   Start {props.selectedCategory.name} Quiz
                 </Button>
               </NavLink>
@@ -29,6 +29,7 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
         }
       }
 
+// <div style={{textAlign:"center", width:"25%", margin:"auto"}}>
 
     return(
       <div style={{maxWidth:"90%", margin:"auto"}}>
