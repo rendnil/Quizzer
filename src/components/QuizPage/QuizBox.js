@@ -26,24 +26,14 @@ class QuizBox extends React.Component{
     if(this.props.currentQuiz&& !this.props.currentQuiz.completed){
       return(
         <div className="quiz-page-wrapper">
-        <Header as="h4" id="question-number">Question Number: {this.props.currentQuiz.questionNumber}</Header>
-        <div id="quiz-title">
-          <Header as="h1" textAlign='center'>
-            {this.props.currentQuiz.categoryName} Quiz
-          </Header>
-        </div>
-
-
-          <Segment>
+          <Header as="h4" id="question-number">Question #{this.props.currentQuiz.questionNumber}</Header>
+          <Header id="quiz-title" as="h1" textAlign='center'>{this.props.currentQuiz.categoryName} Quiz</Header>
 
           <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
-
           <Button onClick={this.submitAnswer} basic primary>Submit</Button>
-          </Segment>
         </div>
       )
-    }
-    else{
+    }else{
       return(<Redirect to ="/results" />)
     }
   }
