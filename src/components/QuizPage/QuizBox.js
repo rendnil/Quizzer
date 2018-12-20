@@ -1,10 +1,11 @@
 import React from "react"
 import { connect } from 'react-redux'
-import {Segment, Button} from 'semantic-ui-react'
+import {Segment, Button, Header} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import {Redirect} from "react-router"
 import QuestionDetail from "./QuestionDetail"
 import {submitAnswer} from "../../redux/actions/submitAnswer"
+import "../../css/QuizPage.css"
 
 class QuizBox extends React.Component{
 
@@ -24,20 +25,25 @@ class QuizBox extends React.Component{
     console.log("quiz box render",this.props);
     if(this.props.currentQuiz&& !this.props.currentQuiz.completed){
       return(
-        <React.Fragment>
+        <div className="quiz-page-wrapper">
+        <Header as="h4" id="question-number">Question Number: {this.props.currentQuiz.questionNumber}</Header>
+        <div id="quiz-title">
+          <Header as="h1" textAlign='center'>
+            {this.props.currentQuiz.categoryName} Quiz
+          </Header>
+        </div>
+
+
           <Segment>
-          <h1>{this.props.currentQuiz.categoryName} Quiz</h1>
-          </Segment>
-          <Segment>
-          <h1>Question Number: {this.props.currentQuiz.questionNumber}</h1>
 
           <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
 
           <Button onClick={this.submitAnswer} basic primary>Submit</Button>
           </Segment>
-        </React.Fragment>
+        </div>
       )
-    }else{
+    }
+    else{
       return(<Redirect to ="/results" />)
     }
   }

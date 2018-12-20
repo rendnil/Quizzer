@@ -1,0 +1,17 @@
+.quiz-page-wrapper{
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+}
+
+#quiz-title{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#question-number{
+  position: absolute;
+  top:0%;
+  right: 0%;
+
+}

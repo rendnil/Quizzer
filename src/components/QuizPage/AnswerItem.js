@@ -12,8 +12,6 @@ class AnswerItem extends React.Component{
   handleClick = () => {
     console.log(this)
     this.props.selectAnswer(this.props.answer)
-
-    //this.props.incrementQuestionNumber()
   }
 
   checkSelected(){
