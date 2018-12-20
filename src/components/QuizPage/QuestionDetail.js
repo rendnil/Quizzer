@@ -9,16 +9,11 @@ class QuestionDetail extends React.Component{
     console.log("detail", this.props);
     return(
       <div>
-        <Message id="question-prompt" color="orange" header="QUESTION" content={this.props.question.prompt}/>
-
-        <h2>Answers</h2>
+        <Message id="question-prompt" warning header="Prompt:" content={this.props.question.prompt}/>
         <AnswerBox answers={this.props.question.answers}/>
       </div>
-
     )
   }
 }
-
-
 
 export default QuestionDetail

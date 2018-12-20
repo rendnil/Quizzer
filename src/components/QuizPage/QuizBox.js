@@ -30,7 +30,10 @@ class QuizBox extends React.Component{
           <Header id="quiz-title" as="h1" textAlign='center'>{this.props.currentQuiz.categoryName} Quiz</Header>
 
           <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
-          <Button onClick={this.submitAnswer} basic primary>Submit</Button>
+
+          <div id="submit-answer-btn" >
+            <Button  onClick={this.submitAnswer} basic size="large" primary>Submit</Button>
+          </div>
         </div>
       )
     }else{

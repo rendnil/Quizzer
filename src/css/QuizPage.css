@@ -16,9 +16,23 @@
 }
 
 #question-prompt{
-  margin-top: 4%;
+  margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
   max-width: 85%;
+}
+
+#answers-wrapper{
+  max-width:75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#submit-answer-btn{
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  text-align: center
 
 }

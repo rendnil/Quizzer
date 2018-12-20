@@ -5,13 +5,11 @@ import {Segment} from 'semantic-ui-react'
 
 const AnswerBox = ({answers}) => {
   return(
-    <Segment>
-
+    <div id="answers-wrapper">
       {answers.map((answer)=>{
         return <AnswerItem key={answer} answer={answer} />
       })}
-
-    </Segment>
+    </div>
   )
 }
 
