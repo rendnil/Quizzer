@@ -1,7 +1,7 @@
 import React from "react"
 import {Segment, Button, Message} from 'semantic-ui-react'
 import AnswerBox from "./AnswerBox"
-import "../../css/QuizPage.css"
+
 
 class QuestionDetail extends React.Component{
 

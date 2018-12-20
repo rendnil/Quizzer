@@ -5,8 +5,6 @@ import {selectAnswer} from "../../redux/actions/selectAnswer"
 import {Segment} from 'semantic-ui-react'
 
 
-
-
 class AnswerItem extends React.Component{
 
   handleClick = () => {

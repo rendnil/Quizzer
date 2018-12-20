@@ -1,5 +1,7 @@
 import React from "react"
 import QuizBox from "./QuizBox"
+import "../../css/QuizPage.css"
+
 
 
 

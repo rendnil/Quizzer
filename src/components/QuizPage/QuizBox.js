@@ -5,7 +5,7 @@ import {NavLink } from 'react-router-dom';
 import {Redirect} from "react-router"
 import QuestionDetail from "./QuestionDetail"
 import {submitAnswer} from "../../redux/actions/submitAnswer"
-import "../../css/QuizPage.css"
+
 
 class QuizBox extends React.Component{
 

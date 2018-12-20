@@ -1,0 +1,15 @@
+#result-page-wrapper{
+  max-width: 90%;
+  margin: auto;
+  position: relative;
+
+}
+
+#result-message{
+  margin-top: 10%;
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align:center;
+  font-size: 2em;
+}
