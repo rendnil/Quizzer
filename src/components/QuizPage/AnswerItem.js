@@ -16,13 +16,13 @@ class AnswerItem extends React.Component{
     if (this.props.answer===this.props.selectedAnswer){
       return(
         <Segment inverted color="blue" onClick={this.handleClick}>
-          <h3>{this.props.answer}</h3>
+          <h3>{this.props.answer.toUpperCase()}</h3>
         </Segment>
       )
     }else{
       return(
         <Segment onClick={this.handleClick}>
-          <h3>{this.props.answer}</h3>
+          <h3>{this.props.answer.toUpperCase()}</h3>
         </Segment>
       )
     }

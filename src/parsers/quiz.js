@@ -10,7 +10,7 @@
 //get randomized questions
 //get randomized answers
 
-const numQuestions = 1
+const numQuestions = 5
 
 //helper method for return random index in an array
 const getRandomIndex = (arr) => {
