@@ -8,16 +8,18 @@ const ResultPage = ({currentQuiz}) => {
 
   return(
     <div id="result-page-wrapper">
-        <Message info id="result-message">
-          <Message.Header>YOU ANSWERED</Message.Header>
-          <Message.Content>{currentQuiz.correctQs.length} out of {currentQuiz.questions.length} Correctly</Message.Content>
-        </Message>
-        
-      <NavLink to = "/">
-        <Button primary basic>
-          Back To Home
-        </Button>
-      </NavLink>
+      <Message info id="result-message">
+        <Message.Header>YOU ANSWERED</Message.Header>
+        <Message.Content>{currentQuiz.correctQs.length} out of {currentQuiz.questions.length} Correctly</Message.Content>
+      </Message>
+
+        <div id="back-home-btn">
+          <NavLink to = "/">
+            <Button color="yellow" size="large">
+              Back to Home
+            </Button>
+          </NavLink>
+        </div>
     </div>
   )
 }
