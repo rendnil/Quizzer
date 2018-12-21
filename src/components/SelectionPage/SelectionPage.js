@@ -15,7 +15,7 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
           return(
             <div id="start-button">
               <NavLink to = "/quiz">
-                <Button size="massive" primary basic>
+                <Button size="massive" color="green" basic>
                   Start {props.selectedCategory.name} Quiz
                 </Button>
               </NavLink>

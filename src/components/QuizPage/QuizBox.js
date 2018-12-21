@@ -29,7 +29,10 @@ class QuizBox extends React.Component{
           <Header as="h4" id="question-number">Question #{this.props.currentQuiz.questionNumber}</Header>
           <Header id="quiz-title" as="h1" textAlign='center'>{this.props.currentQuiz.categoryName} Quiz</Header>
 
-          <QuestionDetail question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}/>
+          <QuestionDetail
+          number={this.props.currentQuiz.questionNumber}
+          question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}
+          />
 
           <div id="submit-answer-btn" >
             <Button  onClick={this.submitAnswer} basic size="large" primary>Submit</Button>

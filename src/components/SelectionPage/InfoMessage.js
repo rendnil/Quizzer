@@ -4,7 +4,7 @@ import "../../css/SelectionPage.css"
 
   const InfoMessage = ({message}) => {
     return(
-      <Message id="start-message" color="teal" header={message}/>
+      <Message id="start-message" warning header={message}/>
     )
   }
 

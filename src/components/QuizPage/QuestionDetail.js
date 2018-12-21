@@ -9,7 +9,10 @@ class QuestionDetail extends React.Component{
     console.log("detail", this.props);
     return(
       <div>
-        <Message id="question-prompt" warning header="Prompt:" content={this.props.question.prompt}/>
+        <Message id="question-prompt" warning>
+          <Message.Header id="question-prompt-header">Question #{this.props.number}</Message.Header>
+          <Message.Content>{this.props.question.prompt}</Message.Content>
+        </Message>
         <AnswerBox answers={this.props.question.answers}/>
       </div>
     )

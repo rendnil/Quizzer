@@ -22,6 +22,10 @@
   max-width: 75%;
 }
 
+#question-prompt-header{
+  text-align: center;
+}
+
 #answers-wrapper{
   max-width:55%;
   margin-left: auto;
