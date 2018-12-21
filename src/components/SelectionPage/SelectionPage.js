@@ -28,7 +28,7 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
       <div className="selection-page-wrapper">
         <WelcomeBanner />
         <CategoryGrid />
-        {!props.selectedCategory? <InfoMessage message="Select A Category To Begin" />: null}
+        {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
         {renderStartQuiz()}
       </div>
     )

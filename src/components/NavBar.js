@@ -13,17 +13,15 @@ const NavBar = (props) => {
 
       {/* display the site name w/icon */}
       <Menu.Item header>
-        <Icon name="question" size="large" style={{ marginRight: '1.5em' }} />
+        {/*<Icon name="question" size="large" style={{ marginRight: '1.5em' }} />*/}
         <NavLink style={navStyle} to = "/">
-        Quizzer
+          Quizzer
         </NavLink>
        </Menu.Item>
 
-       {/* link to news page */}
       <Menu.Item>
-        <NavLink  to = "/"
-        style={navStyle}>
-        Categories
+        <NavLink  to = "/" style={navStyle}>
+          Categories
         </NavLink>
       </Menu.Item>
 

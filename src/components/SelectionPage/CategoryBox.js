@@ -17,7 +17,7 @@ class CategoryBox extends React.Component{
   checkSelected(){
     if (this.props.selectedCategory && this.props.category.id===this.props.selectedCategory.id){
       return(
-        <Segment textAlign = "center" inverted color="purple" onClick={this.handleClick}>
+        <Segment textAlign = "center" inverted color="orange" onClick={this.handleClick}>
           <h3>{this.props.category.name}</h3>
         </Segment>
       )
