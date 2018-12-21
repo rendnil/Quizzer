@@ -26,7 +26,7 @@ class QuizBox extends React.Component{
     if(this.props.currentQuiz&& !this.props.currentQuiz.completed){
       return(
         <div className="quiz-page-wrapper">
-          <Header as="h4" id="question-number">Question #{this.props.currentQuiz.questionNumber}</Header>
+          <Header as="h4" id="question-number">{this.props.currentQuiz.questionNumber} of {this.props.currentQuiz.questions.length}</Header>
           <Header id="quiz-title" as="h1" textAlign='center'>{this.props.currentQuiz.categoryName} Quiz</Header>
 
           <QuestionDetail
