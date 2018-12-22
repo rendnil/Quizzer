@@ -1,16 +1,17 @@
-// <Message color="red">
-//   <Message.Header>YOU ANSWERED</Message.Header>
-//   <Message.Content></Message.Content>
-// </Message>
-
 import React from "react"
+import {Message} from 'semantic-ui-react'
 
 const IncorrectItem = ({question}) => {
   return(
-    <div>
-  heyo
-  </div>
-)
+    <div className="incorrect-item">
+      <Message attached color="red">
+        <Message.Header>Question: {question.prompt}</Message.Header>
+      </Message>
+      <Message attached="bottom" info>
+        <Message.Header>Answer: {question.correctAnswer.toUpperCase()}</Message.Header>
+      </Message>
+    </div>
+  )
 }
 
 

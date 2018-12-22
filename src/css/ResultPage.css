@@ -23,8 +23,11 @@
 
 #incorrect-box-wrapper{
   max-width: 90%;
-  margin-top:5%;
+  margin-top:10%;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+}
+
+.incorrect-item{
+  margin-bottom: 5%;
 }
