@@ -24,7 +24,7 @@ const ResultPage = ({currentQuiz}) => {
           </NavLink>
         </div>
 
-        <IncorrectBox />
+        <IncorrectBox currentQuiz={currentQuiz} />
 
       </div>
     )
