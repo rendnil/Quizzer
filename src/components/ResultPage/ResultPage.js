@@ -3,9 +3,11 @@ import { connect } from 'react-redux'
 import {Segment, Button, Message} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import {Redirect} from "react-router"
+import IncorrectBox from "./IncorrectBox"
 import "../../css/ResultPage.css"
 
 const ResultPage = ({currentQuiz}) => {
+  console.log(currentQuiz);
   if (currentQuiz){
     return(
       <div id="result-page-wrapper">
@@ -21,6 +23,9 @@ const ResultPage = ({currentQuiz}) => {
             </Button>
           </NavLink>
         </div>
+
+        <IncorrectBox />
+
       </div>
     )
   }else{
