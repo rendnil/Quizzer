@@ -8,7 +8,7 @@ const IncorrectItem = ({question}) => {
         <Message.Header>Question: {question.prompt}</Message.Header>
       </Message>
       <Message attached="bottom" info>
-        <Message.Header>Answer: {question.correctAnswer.toUpperCase()}</Message.Header>
+        <Message.Header>Correct Answer: {question.correctAnswer.toUpperCase()}</Message.Header>
       </Message>
     </div>
   )
