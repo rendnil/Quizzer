@@ -32,6 +32,7 @@ export const submitAnswer = (quiz) => {
                     questionNumber:quiz.questionNumber+1
                     }
         })
+        dispatch({type:"CLEAR_SELECTED_ANSWER"})
       }
     }
 }

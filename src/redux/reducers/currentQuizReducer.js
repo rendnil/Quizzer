@@ -19,6 +19,8 @@ const currentQuizReducer = (state=defaultState, action) => {
           return {...state, selectedAnswer:null}
         }
         return {...state, selectedAnswer: action.payload}
+    case "CLEAR_SELECTED_ANSWER":
+      return {...state, selectedAnswer:null}
     case "SUBMIT_ANSWER":
       return action.payload
     default:
