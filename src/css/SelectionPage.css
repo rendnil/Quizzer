@@ -4,7 +4,8 @@
 }
 
 .category-grid-wrapper{
-  margin-bottom: 2%;
+  margin-top:6%;
+  margin-bottom: 6%;
 }
 
 #banner{
@@ -33,5 +34,5 @@
   margin-right: auto;
   text-align: center;
   font-family:"Monoton";
-  font-size:1.5em;
+  font-size:2em;
 }
