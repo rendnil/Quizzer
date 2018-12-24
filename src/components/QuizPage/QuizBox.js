@@ -21,6 +21,18 @@ class QuizBox extends React.Component{
     this.props.submitAnswer(this.props.currentQuiz)
   }
 
+  btnRender = () => {
+    if (this.props.selectedAnswer){
+      return(
+        <div id="submit-answer-btn" >
+          <Button  onClick={this.submitAnswer} basic size="large" primary>Submit</Button>
+        </div>
+      )
+    }else{
+      return null
+    }
+  }
+
   render(){
     console.log("quiz box render",this.props);
     if(this.props.currentQuiz&& !this.props.currentQuiz.completed){
@@ -34,9 +46,7 @@ class QuizBox extends React.Component{
           question={this.props.currentQuiz.questions[this.props.currentQuiz.questionNumber-1]}
           />
 
-          <div id="submit-answer-btn" >
-            <Button  onClick={this.submitAnswer} basic size="large" primary>Submit</Button>
-          </div>
+          {this.btnRender()}
         </div>
       )
     }else{
@@ -48,7 +58,8 @@ class QuizBox extends React.Component{
 const mapStateToProps = (state) => {
   console.log("called map state");
   return{
-    currentQuiz: state.currentQuiz
+    currentQuiz: state.currentQuiz,
+    selectedAnswer: state.currentQuiz.selectedAnswer
   }
 }
 

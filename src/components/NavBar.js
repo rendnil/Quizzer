@@ -9,7 +9,7 @@ const NavBar = (props) => {
   }
   //generate different navbar options and links
   return(
-    <Menu inverted color="blue">
+    <Menu inverted color="green">
 
       {/* display the site name w/icon */}
       <Menu.Item header>
