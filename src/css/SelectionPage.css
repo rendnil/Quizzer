@@ -26,3 +26,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+#navbar-header{
+  margin-bottom:0%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family:"Monoton";
+  font-size:1.5em;
+}
