@@ -7,6 +7,17 @@ import IncorrectBox from "./IncorrectBox"
 import "../../css/ResultPage.css"
 
 const ResultPage = ({currentQuiz}) => {
+
+  const incorrectAnswerRender = () => {
+    if (currentQuiz.incorrectQs.length){
+      return(
+        <IncorrectBox currentQuiz={currentQuiz} />
+      )
+    }else{
+      return null
+    }
+  }
+
   console.log(currentQuiz);
   if (currentQuiz){
     return(
@@ -24,7 +35,7 @@ const ResultPage = ({currentQuiz}) => {
           </NavLink>
         </div>
 
-        <IncorrectBox currentQuiz={currentQuiz} />
+        {incorrectAnswerRender()}
 
       </div>
     )
