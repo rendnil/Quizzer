@@ -1,15 +1,6 @@
 //data parser for creating quiz objects
 
-// inputs {name: "", questions: []}
-//desired output
-// {categoryName:"", questions: [ ], correctQs:[], incorrectQs:[] }
-
-//each question object
-//{prompt:"", answers:[ ], correctAnswer:"", value:""}
-
-//get randomized questions
-//get randomized answers
-
+//determines number of questions for each quiz
 const numQuestions = 5
 
 //helper method for return random index in an array
@@ -28,7 +19,7 @@ export default class Quiz{
   //method for selecting all questions in a quiz
   selectQuestions(){
     let counter = 1
-    //use array of question ids to make sure we don't have repeates
+    //use array of question ids to make sure we don't have repeats
     const idArr = [ ]
     while (counter<= numQuestions){
       let newQuestion = this.constructQuestionObj(this.allQuestions[getRandomIndex(this.allQuestions)])
@@ -74,8 +65,9 @@ export default class Quiz{
     }
   }
 
-
+  //method for creating the full quiz obj
   constructQuiz(){
+    //first select all of the questions
     this.selectQuestions()
     return {categoryName:this.name,
             questions: this.questions,

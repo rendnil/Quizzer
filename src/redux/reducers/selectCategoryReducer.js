@@ -1,4 +1,4 @@
-
+//reducer to handle selecting categories 
 const defaultState = null
 
 const selectCategoryReducer = (state=defaultState, action) => {
@@ -7,11 +7,9 @@ const selectCategoryReducer = (state=defaultState, action) => {
       return action.payload
     case "RESET_CATEGORY":
       return null
-
     default:
       return state
   }
 }
-
 
 export default selectCategoryReducer
