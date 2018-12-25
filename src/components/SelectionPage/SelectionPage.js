@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import {Button} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import "../../css/SelectionPage.css"
-import WelcomeBanner from "./WelcomeBanner"
 import CategoryGrid from "./CategoryGrid"
 import InfoMessage from "./InfoMessage"
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
