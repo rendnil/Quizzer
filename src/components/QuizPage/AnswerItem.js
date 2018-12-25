@@ -1,38 +1,35 @@
 import React from "react"
 import { connect } from 'react-redux'
-import {incrementQuestionNumber} from "../../redux/actions/incrementQuestionNumber"
 import {selectAnswer} from "../../redux/actions/selectAnswer"
 import {Segment} from 'semantic-ui-react'
 
 
-class AnswerItem extends React.Component{
+const AnswerItem = (props)=>{
 
-  handleClick = () => {
-    this.props.selectAnswer(this.props.answer)
+  const handleClick = () => {
+    props.selectAnswer(props.answer)
   }
 
-  checkSelected(){
-    if (this.props.answer===this.props.selectedAnswer){
+  const checkSelected = () =>{
+    if (props.answer===props.selectedAnswer){
       return(
-        <Segment inverted color="blue" onClick={this.handleClick}>
-          <h3>{this.props.answer.toUpperCase()}</h3>
+        <Segment inverted color="blue" onClick={handleClick}>
+          <h3>{props.answer.toUpperCase()}</h3>
         </Segment>
       )
     }else{
       return(
-        <Segment onClick={this.handleClick}>
-          <h3>{this.props.answer.toUpperCase()}</h3>
+        <Segment onClick={handleClick}>
+          <h3>{props.answer.toUpperCase()}</h3>
         </Segment>
       )
     }
   }
 
-
-  render(){
-    return(
-    this.checkSelected()
+  return(
+    checkSelected()
   )
-  }
+
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -44,7 +41,6 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
   return{selectedAnswer: state.currentQuiz.selectedAnswer}
 }
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnswerItem)
