@@ -3,7 +3,7 @@ import {NavLink } from 'react-router-dom';
 import { connect } from 'react-redux'
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 import {selectCategory} from "../../redux/actions/selectCategory"
-import {Segment, Container} from 'semantic-ui-react'
+import {Segment} from 'semantic-ui-react'
 import "../../css/SelectionPage.css"
 
 class CategoryBox extends React.Component{

@@ -12,7 +12,6 @@ const IncorrectBox = ({currentQuiz}) => {
       {currentQuiz.incorrectQs.map((question)=>{
         return <IncorrectItem key={question.id} question={question} />
       })}
-      
     </div>
   )
 }
