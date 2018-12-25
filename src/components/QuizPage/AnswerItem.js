@@ -8,7 +8,6 @@ import {Segment} from 'semantic-ui-react'
 class AnswerItem extends React.Component{
 
   handleClick = () => {
-    console.log(this)
     this.props.selectAnswer(this.props.answer)
   }
 
@@ -38,7 +37,6 @@ class AnswerItem extends React.Component{
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    incrementQuestionNumber: ()=>dispatch(incrementQuestionNumber()),
     selectAnswer: (answer)=>dispatch(selectAnswer(answer))
   }
 }
