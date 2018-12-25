@@ -1,6 +1,5 @@
 import React from "react"
 import AnswerItem from "./AnswerItem"
-import {Segment} from 'semantic-ui-react'
 
 
 const AnswerBox = ({answers}) => {
@@ -12,6 +11,5 @@ const AnswerBox = ({answers}) => {
     </div>
   )
 }
-
 
 export default AnswerBox
