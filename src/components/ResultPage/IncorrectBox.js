@@ -16,5 +16,4 @@ const IncorrectBox = ({currentQuiz}) => {
   )
 }
 
-
 export default IncorrectBox

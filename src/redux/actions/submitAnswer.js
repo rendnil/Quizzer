@@ -1,5 +1,5 @@
 export const submitAnswer = (quiz) => {
-    //debugger
+
     const currentQuestion = quiz.questions[quiz.questionNumber-1]
     const updatedCorrectQs = [...quiz.correctQs]
     const updatedIncorrectQs = [...quiz.incorrectQs]

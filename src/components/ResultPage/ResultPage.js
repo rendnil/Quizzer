@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from 'react-redux'
-import {Segment, Button, Message} from 'semantic-ui-react'
+import {Button, Message} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import {Redirect} from "react-router"
 import IncorrectBox from "./IncorrectBox"
@@ -18,7 +18,6 @@ const ResultPage = ({currentQuiz}) => {
     }
   }
 
-  console.log(currentQuiz);
   if (currentQuiz){
     return(
       <div id="result-page-wrapper">

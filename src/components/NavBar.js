@@ -1,6 +1,6 @@
 import React from "react"
 import {NavLink } from 'react-router-dom';
-import {Menu, Icon, Button} from "semantic-ui-react"
+import {Menu} from "semantic-ui-react"
 
 
 const NavBar = (props) => {
@@ -9,14 +9,7 @@ const NavBar = (props) => {
     <Menu inverted borderless color="green">
 
       {/* display the site name*/}
-
-      {/*<Menu.Item>
-        <NavLink  to = "/" style={navStyle}>
-          Categories
-        </NavLink>
-      </Menu.Item> */}
       <Menu.Item fitted="vertically" id="navbar-header">
-        {/*<Icon name="question" size="large" style={{ marginRight: '1.5em' }} />*/}
         <NavLink to = "/">Quizzer</NavLink>
       </Menu.Item>
     </Menu>

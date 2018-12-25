@@ -7,12 +7,12 @@ const IncorrectItem = ({question}) => {
       <Message attached color="red">
         <Message.Header>Question: {question.prompt}</Message.Header>
       </Message>
+
       <Message attached="bottom" info>
         <Message.Header>Correct Answer: {question.correctAnswer.toUpperCase()}</Message.Header>
       </Message>
     </div>
   )
 }
-
 
 export default IncorrectItem
