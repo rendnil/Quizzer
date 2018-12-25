@@ -26,7 +26,6 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
 
     return(
       <div className="selection-page-wrapper">
-        {/*<WelcomeBanner />*/}
         <CategoryGrid />
         {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
         {renderStartQuiz()}
@@ -41,10 +40,5 @@ import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
     }
   }
 
-  const mapDispatchToProps = (dispatch) => {
-    return{
-      fetchQuestions: (id) => dispatch(fetchQuestions(id))
-    }
-  }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectionPage)
+export default connect(mapStateToProps)(SelectionPage)

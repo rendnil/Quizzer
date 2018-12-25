@@ -1,11 +1,10 @@
 import React from "react"
 import { connect } from 'react-redux'
-import {Grid, Container} from 'semantic-ui-react'
+import {Grid} from 'semantic-ui-react'
 import CategoryBox from "./CategoryBox"
 
 
-const CategoryGrid =  ({categories, state}) => {
-  console.log("WHOLE STATE",state);
+const CategoryGrid =  ({categories}) => {
   return(
     <div className="category-grid-wrapper">
       <Grid columns={4}>
@@ -24,9 +23,7 @@ const CategoryGrid =  ({categories, state}) => {
 const mapStateToProps = (state) => {
   return {
     categories: state.categories,
-    state:state
   }
 }
-
 
 export default connect(mapStateToProps)(CategoryGrid)
