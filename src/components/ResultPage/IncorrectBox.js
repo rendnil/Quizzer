@@ -1,3 +1,4 @@
+//wrapper for incorrect questions 
 import React from "react"
 import {Header} from 'semantic-ui-react'
 import IncorrectItem from "./IncorrectItem"
@@ -8,7 +9,7 @@ const IncorrectBox = ({currentQuiz}) => {
     <div id="incorrect-box-wrapper">
 
       <Header as="h2" textAlign="center">Incorrect Questions</Header>
-
+      {/* iterate over incorrect question objs */}
       {currentQuiz.incorrectQs.map((question)=>{
         return <IncorrectItem key={question.id} question={question} />
       })}
