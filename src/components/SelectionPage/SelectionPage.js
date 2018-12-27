@@ -1,3 +1,4 @@
+//category selection page
 import React from "react"
 import { connect } from 'react-redux'
 import {Button} from 'semantic-ui-react'
@@ -9,6 +10,8 @@ import InfoMessage from "./InfoMessage"
 
 const SelectionPage = (props) => {
 
+  //method for rendering the start quiz btn
+  //check to see if a category has been selected first
   const renderStartQuiz = ()=>{
       if(props.selectedCategory){
         return(
@@ -32,12 +35,8 @@ const SelectionPage = (props) => {
   )
 }
 
-
 const mapStateToProps = (state) =>{
-  return{
-    selectedCategory: state.selectedCategory
-  }
+  return{selectedCategory: state.selectedCategory}
 }
-
 
 export default connect(mapStateToProps)(SelectionPage)

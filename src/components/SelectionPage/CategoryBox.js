@@ -1,3 +1,4 @@
+//individual category box
 import React from "react"
 import { connect } from 'react-redux'
 import {fetchQuestions} from "../../redux/actions/fetchQuestionsAction"
@@ -5,13 +6,18 @@ import {selectCategory} from "../../redux/actions/selectCategory"
 import {Segment} from 'semantic-ui-react'
 
 
-const CategoryBox = (props)=>{
+const CategoryBox = (props) =>{
 
+  //on category click
+  //select Category
+  //fetch questions for this category
   const handleClick = () => {
     props.selectCategory(props.category)
     props.fetchQuestions(props.category.id)
   }
 
+  //check to see is this category is the selected category
+  // if so, change segment color to reflect selection
   const checkSelected = ()=>{
     if (props.selectedCategory && props.category.id===props.selectedCategory.id){
       return(
@@ -28,18 +34,15 @@ const CategoryBox = (props)=>{
     }
   }
 
-    return(
-      <React.Fragment>
-        {checkSelected()}
-      </React.Fragment>
-    )
-
+  return(
+    <React.Fragment>
+      {checkSelected()}
+    </React.Fragment>
+  )
 }
 
 const mapStateToProps = (state) =>{
-  return{
-    selectedCategory: state.selectedCategory
-  }
+  return{selectedCategory: state.selectedCategory}
 }
 
 const mapDispatchToProps = (dispatch) => {
