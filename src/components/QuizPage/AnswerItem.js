@@ -1,3 +1,4 @@
+//individual answer items
 import React from "react"
 import { connect } from 'react-redux'
 import {selectAnswer} from "../../redux/actions/selectAnswer"
@@ -5,11 +6,13 @@ import {Segment} from 'semantic-ui-react'
 
 
 const AnswerItem = (props)=>{
-
+  //method for selecting an answer
   const handleClick = () => {
     props.selectAnswer(props.answer)
   }
 
+  //check to see if answer is the selected answer
+  //change segment color if selected
   const checkSelected = () =>{
     if (props.answer===props.selectedAnswer){
       return(
@@ -33,9 +36,7 @@ const AnswerItem = (props)=>{
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return{
-    selectAnswer: (answer)=>dispatch(selectAnswer(answer))
-  }
+  return{selectAnswer: (answer)=>dispatch(selectAnswer(answer))}
 }
 
 const mapStateToProps = (state) => {

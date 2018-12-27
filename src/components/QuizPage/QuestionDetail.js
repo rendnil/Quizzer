@@ -1,3 +1,4 @@
+//individual question details
 import React from "react"
 import {Message} from 'semantic-ui-react'
 import AnswerBox from "./AnswerBox"
