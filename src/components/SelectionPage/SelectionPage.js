@@ -26,23 +26,28 @@ const SelectionPage = (props) => {
       }
     }
 
-  return(
-    <div className="selection-page-wrapper">
-    {/*
-    <Dimmer active inverted>
-      <Loader inverted>Loading</Loader>
-    </Dimmer>
-*/}
-
-      <CategoryGrid />
-      {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
-      {renderStartQuiz()}
-    </div>
-  )
+  if (props.loading){
+    return (
+      <Dimmer active inverted>
+        <Loader inverted>Loading</Loader>
+      </Dimmer>
+    )
+  }else{
+    return(
+      <div className="selection-page-wrapper">
+        <CategoryGrid />
+        {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
+        {renderStartQuiz()}
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) =>{
-  return{selectedCategory: state.selectedCategory}
+  return{
+    selectedCategory: state.selectedCategory,
+    loading: state.categories.loading
+  }
 }
 
 export default connect(mapStateToProps)(SelectionPage)
