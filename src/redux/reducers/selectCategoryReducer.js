@@ -1,4 +1,4 @@
-//reducer to handle selecting categories 
+//reducer to handle selecting categories
 const defaultState = null
 
 const selectCategoryReducer = (state=defaultState, action) => {
@@ -6,7 +6,7 @@ const selectCategoryReducer = (state=defaultState, action) => {
     case "SELECT_CATEGORY":
       return action.payload
     case "RESET_CATEGORY":
-      return null
+      return null  
     default:
       return state
   }

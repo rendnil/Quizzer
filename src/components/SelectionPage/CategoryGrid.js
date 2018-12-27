@@ -24,7 +24,7 @@ const CategoryGrid = ({categories}) => {
 }
 
 const mapStateToProps = (state) => {
-  return {categories: state.categories}
+  return {categories: state.categories.categories}
 }
 
 export default connect(mapStateToProps)(CategoryGrid)

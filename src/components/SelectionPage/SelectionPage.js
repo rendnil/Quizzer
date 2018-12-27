@@ -1,7 +1,7 @@
 //category selection page
 import React from "react"
 import { connect } from 'react-redux'
-import {Button} from 'semantic-ui-react'
+import {Button, Segment, Dimmer, Loader, Image} from 'semantic-ui-react'
 import {NavLink } from 'react-router-dom';
 import "../../css/SelectionPage.css"
 import CategoryGrid from "./CategoryGrid"
@@ -28,6 +28,12 @@ const SelectionPage = (props) => {
 
   return(
     <div className="selection-page-wrapper">
+    {/*
+    <Dimmer active inverted>
+      <Loader inverted>Loading</Loader>
+    </Dimmer>
+*/}
+
       <CategoryGrid />
       {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
       {renderStartQuiz()}
