@@ -36,7 +36,7 @@ const SelectionPage = (props) => {
     return(
       <div className="selection-page-wrapper">
         <CategoryGrid />
-        {!props.selectedCategory? <InfoMessage message="Select a Category to Begin" />: null}
+        {!props.selectedCategory? <InfoMessage message="Select a category to start!" />: null}
         {renderStartQuiz()}
       </div>
     )
