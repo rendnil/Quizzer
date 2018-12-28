@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router basename={process.env.REACT_APP_BASE_URL}>
           <React.Fragment>
             <NavBar />
             <Route exact path = "/" render = {()=> <SelectionPage/>}/>
