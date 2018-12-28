@@ -36,3 +36,7 @@
   font-family:"Monoton";
   font-size:2em;
 }
+
+.category-box{
+  cursor: pointer;
+}

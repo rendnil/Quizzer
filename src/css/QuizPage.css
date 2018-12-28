@@ -30,6 +30,9 @@
   margin-left: auto;
   margin-right: auto;
 }
+.answer-item{
+  cursor: pointer;
+}
 
 #submit-answer-btn{
   margin-top: 3%;
@@ -37,5 +40,4 @@
   margin-right: auto;
   width: 30%;
   text-align: center
-
 }

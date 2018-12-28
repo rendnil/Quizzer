@@ -21,13 +21,13 @@ const CategoryBox = (props) =>{
   const checkSelected = ()=>{
     if (props.selectedCategory && props.category.id===props.selectedCategory.id){
       return(
-        <Segment textAlign = "center" inverted color="orange" onClick={handleClick}>
+        <Segment className="category-box" textAlign = "center" inverted color="orange" onClick={handleClick}>
           <h3>{props.category.name}</h3>
         </Segment>
       )
     }else{
       return(
-        <Segment textAlign = "center" onClick={handleClick}>
+        <Segment className="category-box" textAlign = "center" onClick={handleClick}>
           <h3>{props.category.name}</h3>
         </Segment>
       )

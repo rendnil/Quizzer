@@ -16,13 +16,13 @@ const AnswerItem = (props)=>{
   const checkSelected = () =>{
     if (props.answer===props.selectedAnswer){
       return(
-        <Segment inverted color="blue" onClick={handleClick}>
+        <Segment className="answer-item" inverted color="blue" onClick={handleClick}>
           <h3>{props.answer.toUpperCase()}</h3>
         </Segment>
       )
     }else{
       return(
-        <Segment onClick={handleClick}>
+        <Segment className="answer-item" onClick={handleClick}>
           <h3>{props.answer.toUpperCase()}</h3>
         </Segment>
       )
